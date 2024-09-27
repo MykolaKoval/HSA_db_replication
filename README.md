@@ -41,11 +41,12 @@ Replica started
 2024-09-27 14:12:09 2024-09-27T11:12:09.116424Z 11 [System] [MY-014001] [Repl] Replica receiver thread for channel '': connected to source 'replica_user@mysql-master:3306' with server_uuid=fdb297fb-7cc0-11ef-a765-0242ac120002, server_id=1. Starting replication from file 'bin.000003', position '158'.
 ```
 
-Replica status after replication is started:
+Replica status before replication is started:
 
 <img src="./images/replica_status.png" width="600">
 
 Connect to master node and run script ``insert_employees.sh`` (adds record to db every sec)
+
 <img src="./images/replica_status_on_read.png" width="600">
 
 When slave1 node is stopped, slave2 node continues to replicate data from master node (no impact).
@@ -58,4 +59,5 @@ ALTER TABLE employees DROP COLUMN first_name; // column from the middle
 
 No impact, slave nodes continue to replicate data.
 
-<img src="./images/replica_dropped_columns.png" width="600"><img src="./images/master_after_dropped_columns.png" width="600">
+<img src="./images/replica_dropped_columns.png" width="600">
+<img src="./images/master_after_dropped_columns.png" width="600">
