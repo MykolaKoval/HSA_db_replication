@@ -1,6 +1,7 @@
 # HSA db replication setup
 
 <h3>MySQL master-slave replication setup</h3>
+
 ```
 log_bin=mysql-bin
 server-id=1
@@ -39,6 +40,8 @@ Replica started
 2024-09-27 14:12:09 2024-09-27T11:12:09.079437Z 11 [Warning] [MY-010897] [Repl] Storing MySQL user name or password information in the connection metadata repository is not secure and is therefore not recommended. Please consider using the USER and PASSWORD connection options for START REPLICA; see the 'START REPLICA Syntax' in the MySQL Manual for more information.
 2024-09-27 14:12:09 2024-09-27T11:12:09.116424Z 11 [System] [MY-014001] [Repl] Replica receiver thread for channel '': connected to source 'replica_user@mysql-master:3306' with server_uuid=fdb297fb-7cc0-11ef-a765-0242ac120002, server_id=1. Starting replication from file 'bin.000003', position '158'.
 ```
+
+Replica status after replication is started:
 <img src="./images/replica_status.png" width="600">
 
 Connect to master node and run script ``insert_employees.sh`` (adds record to db every sec)
