@@ -42,6 +42,7 @@ Replica started
 ```
 
 Replica status after replication is started:
+
 <img src="./images/replica_status.png" width="600">
 
 Connect to master node and run script ``insert_employees.sh`` (adds record to db every sec)
@@ -56,4 +57,5 @@ ALTER TABLE employees DROP COLUMN first_name; // column from the middle
 ```
 
 No impact, slave nodes continue to replicate data.
-<img src="./images/replica_dropped_columns.png" width="600"> <img src="./images/master_after_dropped_columns.png" width="600">
+
+<img src="./images/replica_dropped_columns.png" width="600"><img src="./images/master_after_dropped_columns.png" width="600">
