@@ -6,7 +6,7 @@
 log_bin=mysql-bin
 server-id=1
 ```
-The server-id parameter in MySQL configuration is essential for identifying individual servers in a replication setup. In the context of MySQL Master-Slave replication, each server must have a unique server-id to ensure proper communication and data synchronization between them.
+The ``server-id`` parameter in MySQL configuration is essential for identifying individual servers in a replication setup. In the context of MySQL Master-Slave replication, each server must have a unique server-id to ensure proper communication and data synchronization between them.
 
 Connect to master and collect binary log info: 
 ```
