@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS employees (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(32),
+    last_name VARCHAR(32),
+    department VARCHAR(32),
+    created_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP
+);
