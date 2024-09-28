@@ -3,7 +3,7 @@
 <h3>MySQL master-slave replication setup</h3>
 
 ```
-log_bin=mysql-bin
+log_bin=bin.log
 server-id=1
 ```
 The ``server-id`` parameter in MySQL configuration is essential for identifying individual servers in a replication setup. In the context of MySQL Master-Slave replication, each server must have a unique server-id to ensure proper communication and data synchronization between them.
@@ -41,7 +41,7 @@ Replica started
 2024-09-27 14:12:09 2024-09-27T11:12:09.116424Z 11 [System] [MY-014001] [Repl] Replica receiver thread for channel '': connected to source 'replica_user@mysql-master:3306' with server_uuid=fdb297fb-7cc0-11ef-a765-0242ac120002, server_id=1. Starting replication from file 'bin.000003', position '158'.
 ```
 
-Replica status before replication is started:
+Replica status before data insertion initiated to master node:
 
 <img src="./images/replica_status.png" width="600">
 
